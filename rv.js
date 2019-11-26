@@ -1,8 +1,8 @@
-$(document).ready(async function() {   
+$(document).ready(function() {   
     let timer = setInterval(function() {
         var cBlock = $('.shortcode-wcpr-grid');
         if(cBlock.length) {
-            await showReviews();
+            showReviews();
             clearInterval(timer);
         }
     }, 1000);
