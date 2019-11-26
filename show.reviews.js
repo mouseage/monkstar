@@ -2,13 +2,13 @@ $(document).ready(async function() {
     let timer = setInterval(function() {
         var cBlock = $('.shortcode-wcpr-grid');
         if(cBlock.length) {
-            showReviews();
+            await showReviews();
             clearInterval(timer);
         }
     }, 1000);
 });
 
-function showReviews() {
+function async showReviews() {
     let reviews = await $.ajax('https://cdn.jsdelivr.net/gh/mouseage/monkstars/reviews.json');
     $.each(reviews, function(key, review) {
         let html = `
