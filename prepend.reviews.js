@@ -11,7 +11,7 @@ $(document).ready(function() {
 function showReviews() {
     $.getJSON('https://cdn.jsdelivr.net/gh/mouseage/monkstars/reviews.json', function(reviews) {
         $.each(reviews, function(key, review) {
-            if (review.rating > 3) {
+            if (review.rating > 3 && review.image && review.customer.name != 'Charles W.') {
                 let html = `
                     <div id="shortcode-comment-`+ key +`" class="shortcode-wcpr-grid-item">
                         <div class="shortcode-wcpr-content">`;
